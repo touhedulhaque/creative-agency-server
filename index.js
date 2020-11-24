@@ -40,8 +40,8 @@ client.connect(err => {
             })
     })
 
-    
-    
+
+
     app.get('/servicelistByEmail', (req, res) => {
         email = req.query.email
         orderCollection.find({ email })
@@ -87,6 +87,14 @@ client.connect(err => {
                 res.send(result.insertedCount > 0)
             })
     })
+
+    // app.post('/addAdmin', (req, res) => {
+    //     const admin = req.body;
+    //     adminCollection.insertOne(admin)
+    //         .then(result => {
+    //             res.send(result.insertedCount > 0)
+    //         })
+    // })
 
 
 });
